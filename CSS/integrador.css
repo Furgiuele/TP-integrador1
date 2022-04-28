@@ -1,0 +1,198 @@
+:root {
+    --light-green: rgb(150, 201, 62);
+    --light-green-1: rgb(112, 150, 46);
+    --green: rgb(43, 167, 69);
+    --green-h: rgb(32, 121, 51);
+    --green-f: rgb(4, 144, 43);
+    --gray: rgb(51, 58, 64);
+    --blue: #1d3947;
+    --blue_g: linear-gradient(360deg, #1c3643, #1e5372);
+    
+  }
+* {
+    font-size: 14px;
+}
+header{
+    height: 64px;
+}
+body{
+    width: 100%;
+    
+}
+
+#oradores,
+#lugar,
+#conviertete {
+  scroll-margin-block-start: 90px;
+}
+.navbar-toggler{
+    background-color: rgb(7, 97, 7);
+}
+.navbar-toggler:focus{
+box-shadow: none;
+}
+.btn{
+    width: 8rem;
+}
+.btn-grey{
+    background-color: rgb(75, 73, 73);
+}
+.btn-grey:hover{
+     background-color: grey;
+}
+.btn-green{      
+    background-color: var(--green-h);  
+    border-radius: 8px;
+}
+.btn-green:hover{
+    color:var(--light-green);
+}
+.btn-green:focus {
+    transform: scale(1.1);
+    background:linear-gradient(-90deg, var(--green-f), var(--light-green))
+    
+}
+.btn-outline-light:focus{
+    transform: scale(1.1);
+    color: black;
+    background:linear-gradient(360deg, grey , white);
+
+    
+}
+.btn-light-green{
+    background-color: var(--light-green);
+}
+.text-success:hover{
+    color: var(--light-green) !important;
+}
+
+/*Oradores*/
+#logo{
+    height: 50px;
+    width: 100px;
+}
+
+#comprar-tickets:focus{
+box-shadow: 0 0 0 0;
+
+}
+/*main*/
+.encabezado-parrafo {  
+    font-weight: 550;  
+  }
+.encabezado {
+    top: 30%;
+    color: white;
+  }
+  .banner-position {
+    margin-bottom: 70px !important;
+    top: 60px;
+    height: 100vh;
+  }
+  .banner-img {
+    width: 100%;
+    min-height: 70vh;
+    background: url("../Imagenes/ba3.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+  .bg-oscurecido {
+    width: 100%;
+    min-height: 70vh;
+    background-color: rgba(0, 0, 0, 0.55);
+  }
+
+    
+
+.card {
+    width: 20rem;
+    background-color: rgb(241, 241, 241);
+}
+
+.card a {
+    padding: .2rem .4rem .2rem .4rem;
+    font-size: .7rem;
+    font-weight: bold;
+    border: 0;
+    border-radius: 5px;    
+}
+
+.fondo {
+    background-image: url("../Imagenes/hawaii2.jpg");
+    min-width: 200px;
+    height: 400px;
+   
+}
+.text-dotted {
+    color: #333333;
+    text-decoration: underline;
+    text-decoration-thickness: 2px;
+    cursor: default;
+    
+}
+.card-img{
+    height: 500px;
+}
+.img-fit-cover{
+    object-fit: cover;
+}
+
+
+/* footer*/
+
+footer{
+    padding: 0 !important;
+}
+.bg-blue{
+    background: var(--blue_g);
+}
+footer a{
+    color: white;
+    text-decoration: none;
+}
+footer a:hover{
+    color:var(--light-green)
+
+}
+.footer-size {
+    min-height: 80px;
+  }
+.pre-line{
+    white-space: normal;
+}
+
+/*medias query*/
+@media (max-width: 580px)  {
+    h1{
+    text-align: center;  
+    }
+    .encabezado-botones{
+        display: flex;
+        justify-content: center;
+    }
+    
+}
+
+@media (min-width: 576px) {
+    .pre-line {
+      white-space: pre-line !important;
+    }
+}
+@media (min-width: 768px) {
+    .encabezado-parrafo {
+      width: 550px;
+    } 
+    .encabezado {
+      top: 30%;
+    }
+    .pe-sm-6 {
+        padding-right: 6rem !important;
+      }
+}
+
+@media (min-width: 992px) {
+    .w-md-60 {
+      width: 60% !important;
+    } 
+}
