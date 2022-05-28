@@ -19,18 +19,16 @@ body{
     width: 100%;
     
 }
-
 #oradores,
 #lugar,
-#conviertete {
+#Conviertete {
   scroll-margin-block-start: 90px;
 }
-.navbar-toggler{
-    background-color: rgb(7, 97, 7);
+.text-muted {
+    color: lightgray;
+    font-size: .7rem;
 }
-.navbar-toggler:focus{
-box-shadow: none;
-}
+
 .btn{
     width: 8rem;
 }
@@ -62,6 +60,14 @@ box-shadow: none;
 .btn-light-green{
     background-color: var(--light-green);
 }
+
+.navbar-toggler{
+    background-color: rgb(7, 97, 7);
+}
+.navbar-toggler:focus{
+box-shadow: none;
+}
+
 .text-success:hover{
     color: var(--light-green) !important;
 }
@@ -137,6 +143,42 @@ box-shadow: 0 0 0 0;
 .img-fit-cover{
     object-fit: cover;
 }
+
+/* COMPRAR TICKETS*/
+    .total { 
+    background-color: lightblue;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    padding: .8rem;
+    border: 1px solid;
+    border-radius: 5px;
+}
+#Estudiante-card{
+    border-width: 3px;
+    border-color: lightblue;
+}
+#Estudiante-card .card-header{
+    background-color: lightblue;
+}
+#Trainee-card{
+    border-width: 3px;
+    border-color: var(--light-green);
+
+}
+#Trainee-card .card-header{
+background-color: var(--light-green);
+}
+
+#Junior-card{
+    border-width: 3px;
+    border-color: rgba(212, 212, 27, 0.795)
+
+}
+#Junior-card  .card-header{
+    background-color: rgba(212,212,27,0.795);
+
+}
+
 
 
 /* footer*/

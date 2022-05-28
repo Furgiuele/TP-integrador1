@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0 shrink-to-fit=no" />
     <title>Tp Integrador</title>
 
     <link
@@ -25,8 +25,8 @@
             <a class="navbar-brand" href="#">Conf Bs As</a>
           </div>
 
-          <div class="justify-content-end">
-            <button
+          <div class="ustify-content-end">
+            <buttonj
               class="navbar-toggler"
               type="button"
               data-bs-toggle="collapse"
@@ -36,7 +36,7 @@
               aria-label="Toggle navigation"
             >
               <span class="navbar-toggler-icon"></span>
-            </button>
+            </buttonj>
             
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
               <ul class="navbar-nav me-auto mb-2 mb-lg-0">
@@ -52,10 +52,10 @@
                   <a class="nav-link" href="#lugar">Lugar y fecha</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#conviertete">Conviertete en orador</a>
+                  <a class="nav-link" href="#Conviertete">Conviertete en orador</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link text-success" href="#">Comprar tickets</a>
+                  <a class="nav-link text-success" href="#ComprarTickets">Comprar tickets</a>
                 </li>
               </ul>
             </div>
@@ -65,6 +65,7 @@
     </header>
 
     <main>
+       <!-- Panel prncipal-->
       <section id="conferencia" class="d-flex banner-img">
         <div class="bg-oscurecido">        
           <div class="position-relative d-flex flex-column align-items-sm-center align-items-lg-end pe-1 pe-sm-6 w-100 encabezado">
@@ -75,13 +76,13 @@
               </p>
             </div>
             <div class="encabezado-botones">
-              <a href="#" class="btn btn-outline-light me-4">Quiero ser orador</a>
-              <a href="#" id="comprar-tickets" class="btn btn-green text-light">Comprar tickets</a>
+              <a href="#Conviertete" class="btn btn-outline-light me-4">Quiero ser orador</a>
+              <a href="#ComprarTickets" id="comprar-tickets" class="btn btn-green text-light">Comprar tickets</a>
             </div>
           </div>
         </div>
       </section>
-      
+       <!-- Cards -->
       <section id="oradores" class="mt-4">
         <p class="text-uppercase text-center">Conoce a los</p>
         <h3 class="text-uppercase text-center">Oradores</h3>
@@ -119,7 +120,7 @@
         </div>
       </section> 
   
-      
+       <!-- imagen y texto -->
       <section id="lugar">
         <div class="d-flex flex-column flex-md-row">
           <div class="col-12 col-md-6  pe-0">
@@ -138,8 +139,8 @@
           </div>
         </div>
       </section>
-
-      <section id="conviertete" class="mt-4 mb-4">
+       <!-- Conviertete -->
+      <section id="Conviertete" class="mt-4 mb-4">
         <p class="text-center mb-0">Conviértete en un</p>
         <h3 class="text-uppercase text-center mb-3">Orador</h3>
         <p class="text-center mb-1">
@@ -192,6 +193,87 @@
           </div>
         </form>
       </section>
+      <!--Cards de categorias-->
+      <section id="comprar-tickets" class="mt-4">
+          <div class="d-flex justify-content-center align-items-center align-items-sm-center align-items-md-start flex-column flex-md-row ">
+            <div class="card m-2  mb-3 text-center" id="Estudiante-card" style="max-width: 18rem;" onclick="updCat(1)">
+              <div class="card-header ">Estudiante</div>
+              <div class="card-body ">
+                <h6 class="card-text" >Tiene un descuento del 80%</h6>
+                <p class="textoOpaco">* Presentar documentación</p>
+              </div>
+            </div>
+            <div class="card m-2   text-center"id="Trainee-card" style="max-width: 18rem;"   onclick="updCat(2)">
+              <div class="card-header">Trainee</div>
+              <div class="card-body ">
+                <h6 class="card-text" >Tiene un descuento del 50%</h6>
+                <p class="textoOpaco">* Presentar documentación</p>
+              </div>
+          </div>
+          <div class="card m-2 mb-3 text-center" id="Junior-card"style="max-width: 18rem;"  onclick="updCat(3)">
+            <div class="card-header">Junior</div>
+            <div class="card-body ">
+              <h6 class="card-text" >Tiene un descuento del 15%</h6>
+              <p class="textoOpaco">* Presentar documentación</p>
+            </div>
+          </div>
+      </section> 
+  
+      <!-- formulario comprar ticket -->
+    <div class="container-fluid w-md-60">
+      <div class="text-center">Venta</div>
+      <div class="display-6 text-center">Valor del Ticket $200</div>
+
+      <form action="#" method="post" class="my-4">
+          <div class="row">
+              <div class="col-md mb-4">
+                  <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control">
+              </div>
+              <div class="col-md mb-4">
+                  <input type="text" name="apellido" id="apellido" placeholder="Apellido" class="form-control">
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md mb-4">
+                  <input type="email" name="email" id="email" placeholder="email" class="form-control">
+
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md">
+                  <input type="text" name="cant" id="cant" placeholder="Cantidad" class="form-control" onkeyup="calcTotal()">
+              </div>
+              <div class="col-md">
+                  <select class="form-select" aria-label="Default select example" id="categoria" onchange="calcTotal()">
+                      <option value="1" selected>Estudiante</option>
+                      <option value="2">Trainee</option>
+                      <option value="3">Junior</option>
+                  </select>                    
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md total">
+                  Total a pagar: $ <span id="total"></span>
+              </div>
+          </div>
+
+          <div class="row">
+              <div class="col-md">
+                  <input type="reset" value="Limpiar" class="btn btn-primary mb-1">
+              </div>
+              <div class="col-md">
+                  <input type="button" value="Resumen" class="btn btn-primary mb-1" onclick="calcTotal()">
+              </div>
+              <div class="col-md">
+                  <input type="submit" value="Enviar" class="btn btn-primary mb-1">
+              </div>
+          </div>
+      </form>
+    </section>
+  </div>
     </main>
 
     <footer class="container-fluid text-white small text-center bg-blue">    
@@ -207,11 +289,12 @@
         <a href="#">Estudiantes</a>
       </div>    
     </footer>
-
+    <!--Bootstrap JavaScript Libraries-->
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
       crossorigin="anonymous"
     ></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
